@@ -3,10 +3,16 @@
   "version": "1.0.1",
   "description": "A simple and customizable React modal component",
   "main": "dist/hrnet-modal.umd.js",
-  "module": "dist/hrnet-modal.es.js",
+  "module": "dist/hrnet-modal.mjs",
   "files": [
     "dist"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/hrnet-modal.mjs",
+      "require": "./dist/hrnet-modal.umd.js"
+    }
+  },
   "scripts": {
     "build": "vite build",
     "prepublishOnly": "npm run build"
@@ -24,8 +30,8 @@
     "react-dom": ">=16.8.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.5.2",
-    "vite": "^6.3.5"
+    "vite": "^5.0.0",
+    "@vitejs/plugin-react": "^4.0.0"
   },
   "repository": {
     "type": "git",
