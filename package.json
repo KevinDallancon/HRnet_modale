@@ -2,11 +2,15 @@
   "name": "@kevindallancon/hrnet-modal",
   "version": "1.0.0",
   "description": "A simple and customizable React modal component",
-  "main": "src/index.js",
-  "module": "src/index.js",
+  "main": "dist/hrnet-modal.umd.js",
+  "module": "dist/hrnet-modal.es.js",
   "files": [
-    "src"
+    "dist"
   ],
+  "scripts": {
+    "build": "vite build",
+    "prepublishOnly": "npm run build"
+  },
   "keywords": [
     "react",
     "modal",
@@ -16,7 +20,12 @@
   "author": "Kevin Dallancon",
   "license": "MIT",
   "peerDependencies": {
-    "react": ">=16.8.0"
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.5.2",
+    "vite": "^6.3.5"
   },
   "repository": {
     "type": "git",
