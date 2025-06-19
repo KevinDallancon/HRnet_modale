@@ -1,20 +1,20 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
+import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), cssInjectedByJsPlugin()],
   build: {
     lib: {
       entry: 'src/Modal.jsx',
       name: 'HRnetModal',
-      fileName: 'hrnet-modal'
+      fileName: 'index.js'
     },
     rollupOptions: {
-      external: ['react', 'react-dom'],
+      external: ['react'],
       output: {
         globals: {
           react: 'React',
-          'react-dom': 'ReactDOM'
         }
       }
     }
