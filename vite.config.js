@@ -6,17 +6,19 @@ export default defineConfig({
   plugins: [react(), cssInjectedByJsPlugin()],
   build: {
     lib: {
-      entry: 'src/Modal.jsx',
+      entry: 'src/index.js', // ou index.jsx selon ton fichier
       name: 'HRnetModal',
-      fileName: 'index.js'
+      fileName: (format) => `hrnet-modal.${format}.js`,
+      formats: ['es', 'cjs']
     },
     rollupOptions: {
-      external: ['react'],
+      external: ['react', 'react-dom'],
       output: {
         globals: {
           react: 'React',
+          'react-dom': 'ReactDOM'
         }
       }
     }
   }
-})
+});
