@@ -54,7 +54,7 @@ function Example() {
 | `onClose`         | `function` | ✅     | Fonction appelée lors de la fermeture (clic extérieur ou bouton "X")       |
 | `title`           | `string`   | ✅     | Titre affiché en haut de la modale                                         |
 | `content`         | `string`   | ✅     | Contenu texte affiché dans la modale                                       |
-| `backgroundColor` | `string`   | ❌     | Couleur de fond personnalisable de la modale (`#fff`, `#000`, etc.)        |          # Point d’entrée de l’application
+| `backgroundColor` | `string`   | ❌     | Couleur de fond personnalisable de la modale (`#fff`, `#000`, etc.)        |         
 
 ```
 
